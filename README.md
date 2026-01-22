@@ -1,7 +1,45 @@
  — RAG-para-IA---Test (versión final y completa)
-markdown
-12345678910111213141516171819202122232425262728293031323334353637383940
-# 🧠 RAG para IA — Sistema Local Completo> *Un entorno 100% local para hacer preguntas a tus propios documentos usando inteligencia artificial. Sin nube. Sin APIs externas. Solo tu CPU y tu conocimiento.*Este repositorio implementa un **sistema RAG (Retrieval-Augmented Generation) completo y autocontenido**, capaz de:1. **Indexar** documentos (TXT, PDF, CSV) en una base vectorial.2. **Responder preguntas** usando un modelo de lenguaje pequeño pero eficiente (**Qwen2 0.5B**) ejecutado localmente con `llama.cpp`.✅ Todo corre en tu PC.  ✅ Tus datos nunca salen de tu máquina.  ✅ Funciona en español gracias a embeddings multilingües.---## 📦 ¿Qué hace cada script?| Archivo | Función ||--------|--------|| `preparar_rag.py` | Carga tus documentos, los divide en fragmentos y genera una base vectorial FAISS. || `rag_qwen2_completo.py` | Usa esa base + un modelo LLM local para responder preguntas sobre tus documentos. |Juntos forman un **flujo RAG completo**: desde la ingesta hasta la respuesta.---## 🛠️ Requisitos previos- Python 3.9+- ~2–4 GB de RAM libre (dependiendo del modelo)- Windows, Linux o macOS- Conexión a internet **solo para la instalación inicial**---## ▶️ Pasos para usar el sistema### 1. Clonar el repositorio```bashgit clone https://github.com/maxiducoli/RAG-para-IA---Test.gitcd RAG-para-IA---Test
+
+# 🧠 RAG para IA — Sistema Local Completo
+
+> *Un entorno 100% local para hacer preguntas a tus propios documentos usando inteligencia artificial. Sin nube. Sin APIs externas. Solo tu CPU y tu conocimiento.*
+
+Este repositorio implementa un **sistema RAG (Retrieval-Augmented Generation) completo y autocontenido**, capaz de:
+1. **Indexar** documentos (TXT, PDF, CSV) en una base vectorial.
+2. **Responder preguntas** usando un modelo de lenguaje pequeño pero eficiente (**Qwen2 0.5B**) ejecutado localmente con `llama.cpp`.
+
+✅ Todo corre en tu PC.  
+✅ Tus datos nunca salen de tu máquina.  
+✅ Funciona en español gracias a embeddings multilingües.
+
+---
+
+## 📦 ¿Qué hace cada script?
+
+| Archivo | Función |
+|--------|--------|
+| `preparar_rag.py` | Carga tus documentos, los divide en fragmentos y genera una base vectorial FAISS. |
+| `rag_qwen2_completo.py` | Usa esa base + un modelo LLM local para responder preguntas sobre tus documentos. |
+
+Juntos forman un **flujo RAG completo**: desde la ingesta hasta la respuesta.
+
+---
+
+## 🛠️ Requisitos previos
+
+- Python 3.9+
+- ~2–4 GB de RAM libre (dependiendo del modelo)
+- Windows, Linux o macOS
+- Conexión a internet **solo para la instalación inicial**
+
+---
+
+## ▶️ Pasos para usar el sistema
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/maxiducoli/RAG-para-IA---Test.git
+cd RAG-para-IA---Test
 
 2. Instalar dependencias
 bash
